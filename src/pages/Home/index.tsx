@@ -56,7 +56,12 @@ const Home: React.FC = () => {
         />
       </div>
 
-      {isLoading ? <div>Loading...</div> : <ThumbnailsGrid data={data} />}
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        // @ts-expect-error data is not an array
+        <ThumbnailsGrid data={data} />
+      )}
     </div>
   );
 };
