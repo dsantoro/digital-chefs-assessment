@@ -1,0 +1,16 @@
+.details {
+  position: relative;
+  height: calc(100dvh - 160px);
+}
+
+.details img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.details button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
