@@ -3,16 +3,13 @@ import Thumbnail from "../Thumbnail";
 import { IImage } from "../../pages/Home/hooks";
 
 interface ThumbnailsGridProps {
-  data: {
-    results: IImage[];
-  };
+  results: IImage[];
 }
 
-const ThumbnailsGrid: React.FC<ThumbnailsGridProps> = ({ data }) => {
-  // Implement component logic here
+const ThumbnailsGrid: React.FC<ThumbnailsGridProps> = ({ results = [] }) => {
   return (
     <div className="thumbnails-grid">
-      {data.results.map((image: IImage) => (
+      {results.map((image: IImage) => (
         <div className="thumbnail-container" key={image.id}>
           <Thumbnail
             link={`/details/${image.id}`}

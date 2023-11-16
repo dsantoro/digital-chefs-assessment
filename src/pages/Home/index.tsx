@@ -30,7 +30,7 @@ const Home: React.FC = () => {
     setQueryState({ ...queryState, [key]: value });
   };
 
-  console.log(queryState);
+  console.log(data);
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -59,8 +59,7 @@ const Home: React.FC = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        // @ts-expect-error data is not an array
-        <ThumbnailsGrid data={data} />
+        <ThumbnailsGrid results={data?.results ?? []} />
       )}
     </div>
   );

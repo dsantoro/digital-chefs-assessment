@@ -22,7 +22,7 @@ const fetchImages = async (options = "query=beach") => {
 };
 
 export const useImages = (options: string) => {
-  const { data, isLoading, error } = useQuery<IResponse[]>(
+  const { data, isLoading, error } = useQuery<IResponse>(
     ["images", options],
     () => fetchImages(options)
   );
