@@ -25,6 +25,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+a {
+  color: #ffffff;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

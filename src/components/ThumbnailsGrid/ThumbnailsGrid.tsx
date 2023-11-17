@@ -8,6 +8,8 @@ interface ThumbnailsGridProps {
 }
 
 const ThumbnailsGrid: React.FC<ThumbnailsGridProps> = ({ data, loading }) => {
+  if (!loading && data.length === 0) return <h1>No results found 😖😖😖</h1>;
+
   return (
     <div className="thumbnails-grid">
       {loading
