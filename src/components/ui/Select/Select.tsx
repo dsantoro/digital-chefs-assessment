@@ -3,12 +3,11 @@ import "./select.css";
 
 interface SelectProps extends HtmlHTMLAttributes<HTMLSelectElement> {
   options: Record<string, string>[];
-  selected: string;
 }
 
-const Select: React.FC<SelectProps> = ({ onChange, options }) => {
+const Select: React.FC<SelectProps> = ({ options, ...rest }) => {
   return (
-    <select onChange={onChange}>
+    <select {...rest}>
       {options.map((option) => (
         <option
           key={option.value}

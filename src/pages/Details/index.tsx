@@ -10,10 +10,8 @@ const Details: React.FC<DetailsProps> = () => {
   const { goBack } = useHistory();
   const { data, isLoading } = useImageDetails(id);
 
-  console.log(data);
-
   if (isLoading) return <div>Loading...</div>;
-  // Implement your component logic here
+
   return (
     <div className="container">
       <div className="details">
