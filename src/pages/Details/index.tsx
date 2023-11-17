@@ -11,18 +11,20 @@ const Details: React.FC<DetailsProps> = () => {
   const { goBack } = useHistory();
   const { data, isLoading } = useImageDetails(id);
 
-  if (isLoading) return <div>Loading...</div>;
-
   return (
     <div className="container">
-      <div className="details">
-        <Button onClick={goBack} text="Go back" />
-        <img
-          src={data?.urls.regular}
-          alt={data?.alt_description}
-          style={{ width: "100%" }}
-        />
-      </div>
+      {isLoading ? (
+        <h1>Loading image 🫷</h1>
+      ) : (
+        <div className="details">
+          <Button onClick={goBack} text="Go back" />
+          <img
+            src={data?.urls.regular}
+            alt={data?.alt_description}
+            style={{ width: "100%" }}
+          />
+        </div>
+      )}
     </div>
   );
 };
