@@ -1,0 +1,12 @@
+button {
+  all: unset;
+  cursor: pointer;
+  padding: .3rem .8rem;
+  background-color: var(--ruby);
+  transition: background-color .3s ease-in-out;
+  will-change: background-color;
+}
+
+button:hover {
+  background-color: var(--redish);
+}

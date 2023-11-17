@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useImageDetails } from "./hooks";
+import Button from "../../components/ui/Button";
 import "./details.css";
 
 interface DetailsProps {}
@@ -15,7 +16,7 @@ const Details: React.FC<DetailsProps> = () => {
   return (
     <div className="container">
       <div className="details">
-        <button onClick={goBack}>Back</button>
+        <Button onClick={goBack} text="Go back" />
         <img
           src={data?.urls.regular}
           alt={data?.alt_description}
