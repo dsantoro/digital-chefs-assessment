@@ -14,10 +14,18 @@ const ThumbnailsGrid: React.FC<ThumbnailsGridProps> = ({ data, loading }) => {
     <div className="thumbnails-grid">
       {loading
         ? Array.from({ length: 10 }).map((_, i) => (
-            <div className="thumbnail-container skeleton" key={i} />
+            <div
+              className="thumbnail-container skeleton"
+              data-testid="thumbnail-skeleton"
+              key={i}
+            />
           ))
         : data.map((image: IImage) => (
-            <div className="thumbnail-container" key={image.id}>
+            <div
+              className="thumbnail-container"
+              key={image.id}
+              data-testid="thumbnail-container"
+            >
               <Thumbnail
                 link={`/details/${image.id}`}
                 imageUrl={image.urls.regular}

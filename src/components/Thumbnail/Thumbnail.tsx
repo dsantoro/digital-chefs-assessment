@@ -10,7 +10,7 @@ interface ThumbnailProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Thumbnail: React.FC<ThumbnailProps> = ({ imageUrl, altText, link }) => {
   return (
-    <Link to={link} className="thumbnail">
+    <Link to={link} className="thumbnail" data-testid="thumbnail">
       <img src={imageUrl} alt={altText} />
       <span>{altText}</span>
     </Link>

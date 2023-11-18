@@ -6,7 +6,7 @@ interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const Input: React.FC<InputProps> = ({ ...rest }) => {
-  return <input {...rest} />;
+  return <input {...rest} data-testid="input-element" />;
 };
 
 export default Input;
